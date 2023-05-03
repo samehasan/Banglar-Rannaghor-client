@@ -1,0 +1,45 @@
+/* ServiceDetails.css */
+
+.ServiceDetails {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ServiceDetails-title {
+    margin-top: 0;
+    font-size: 2rem;
+  }
+  
+  .ServiceDetails-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .ServiceDetails-bio {
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }
+  
+  .ServiceDetails-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .ServiceDetails-likes,
+  .ServiceDetails-recipe,
+  .ServiceDetails-experience {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .ServiceDetails-label {
+    font-size: 1.2rem
+  

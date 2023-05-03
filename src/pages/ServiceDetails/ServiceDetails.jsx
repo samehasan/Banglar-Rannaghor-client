@@ -1,5 +1,8 @@
+/* ServiceDetails.jsx */
+
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import "./ServiceDetails.css";
 
 const ServiceDetails = () => {
   const { id } = useParams();
@@ -20,21 +23,32 @@ const ServiceDetails = () => {
   }
 
   return (
-    <div>
-      <h2>{chef.name}</h2>
-      <img src={chef.picture} alt={chef.name} />
-      <p>{chef.bio}</p>
-      <p>Likes: {chef.likes}</p>
-      <p>Recipes: {chef.recipe}</p>
-      <p>Years of Experience: {chef.years_of_experience}</p>
-      <h3>Recipes</h3>
-      <ul>
+    <div className="ServiceDetails">
+      <h2 className="ServiceDetails-title">{chef.name}</h2>
+      <img className="ServiceDetails-image" src={chef.picture} alt={chef.name} />
+      <p className="ServiceDetails-bio">{chef.bio}</p>
+      <div className="ServiceDetails-info">
+        <div className="ServiceDetails-likes">
+          <p className="ServiceDetails-label">Likes:</p>
+          <p className="ServiceDetails-value">{chef.likes}</p>
+        </div>
+        <div className="ServiceDetails-recipe">
+          <p className="ServiceDetails-label">Recipes:</p>
+          <p className="ServiceDetails-value">{chef.recipe}</p>
+        </div>
+        <div className="ServiceDetails-experience">
+          <p className="ServiceDetails-label">Years of Experience:</p>
+          <p className="ServiceDetails-value">{chef.years_of_experience}</p>
+        </div>
+      </div>
+      <h3 className="ServiceDetails-subtitle">Recipes</h3>
+      <ul className="ServiceDetails-recipes">
         {chef.recipes.map((recipe) => (
-          <li key={recipe.recipe_id}>
-            <h4>{recipe.recipe_name}</h4>
-            <p>Ingredients: {recipe.ingredients.join(", ")}</p>
-            <p>Cooking Method: {recipe.cooking_method}</p>
-            <p>Rating: {recipe.rating}</p>
+          <li key={recipe.recipe_id} className="ServiceDetails-recipeItem">
+            <h4 className="ServiceDetails-recipeTitle">{recipe.recipe_name}</h4>
+            <p className="ServiceDetails-recipeIngredients">Ingredients: {recipe.ingredients.join(", ")}</p>
+            <p className="ServiceDetails-recipeMethod">Cooking Method: {recipe.cooking_method}</p>
+            <p className="ServiceDetails-recipeRating">Rating: {recipe.rating}</p>
           </li>
         ))}
       </ul>
