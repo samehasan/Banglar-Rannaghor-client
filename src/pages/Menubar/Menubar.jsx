@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 // eslint-disable-next-line no-unused-vars
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./Menubar.css";
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
@@ -20,10 +20,13 @@ const Menubar = () => {
     <div className="Menubar-container">
       <h2>BANGLAR RANNAGHAR</h2>
       <div className="menu-container">
-         <Link to="/">
+         <Link  to="/" >
           <li>Home</li>
         </Link> 
-        <Link to="/services">
+        {/* <NavLink className={({isActive})=>(isActive?'active':'link')} to="/services">
+          <li>CHEFs</li>
+        </NavLink> */}
+        <Link  to="/services">
           <li>CHEFs</li>
         </Link>
         <Link to="/blog">
