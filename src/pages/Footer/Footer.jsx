@@ -7,35 +7,31 @@ const Footer = () => {
       <footer>
         <div className="container">
           <div className="row">
-            <div className="col-sm-6 col-md-2 item">
-              <h3>OUR DELUX</h3>
+            <div className="col-sm-4 col-md-2 item">
+              <h3>OUR OTHER WEBSITES</h3>
               <ul>
                 <li>
-                  <a href="/">Dental Clinic</a>
+                  <a href="/">Banglar gaan</a>
                 </li>
                 <li>
-                  <a href="/">Orthopedic</a>
+                  <a href="/">Banglar Dress</a>
                 </li>
                 <li>
-                  <a href="/">Women’s Health</a>
+                  <a href="/">Hater Kaj</a>
                 </li>
-                <li>
-                  <a href="/">More....</a>
-                </li>
+              
               </ul>
             </div>
             
             <div className="col-md-4 item text">
-              <h3>BANGLADESH Food</h3>
+              <h3>BANGLADESH FOOD</h3>
               <p>
-                At BANGLADESH MEDICAL , providing our patients with a trusted
-                and compassionate environment for healthcare is central to our
-                mission.
+              This is a Bangla Cusine Website.Where you can get many recipe .Go check the site
               </p>
             </div>
-            <div className="col-md-2 item text">
+            <div className="col-md-4 item text">
               <h3>CONTACT US</h3>
-              <div class="row g-3">
+              <div className="row g-3">
                 <div className="col-md-12">
                   <input
                     type="email"
@@ -47,7 +43,7 @@ const Footer = () => {
                 <div className="col-md-12">
                   {/* <input type="text" className="form-control" placeholder="Message" aria-label="Message"/> */}
                   <textarea
-                    class="form-control"
+                    className="form-control"
                     rows="5"
                     id="comment"
                     placeholder="Message"
@@ -57,7 +53,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <p className="copyright">BANGLADESH MEDICAL © 2021</p>
+          <p className="copyright">BANGLADESH FOOD © 2023</p>
         </div>
       </footer>
     </div>

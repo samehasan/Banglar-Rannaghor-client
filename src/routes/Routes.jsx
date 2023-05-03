@@ -8,6 +8,8 @@ import Services from "../pages/Services/Services";
 import ServiceDetails from "./../pages/ServiceDetails/ServiceDetails";
 import Register from "./../pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
+import Home from "../pages/Home/Home";
+import Blog from "../pages/Blog/Blog";
 
 const router = createBrowserRouter([
   {
@@ -15,12 +17,20 @@ const router = createBrowserRouter([
     element: <LoginLayout></LoginLayout>,
     children: [
       {
+        path: "/",
+        element: <Home></Home>,
+      },
+      {
         path: "login",
         element: <Login></Login>,
       },
       {
         path: "register",
         element: <Register></Register>,
+      },
+      {
+        path: "blog",
+        element: <Blog></Blog>,
       },
     ],
   },

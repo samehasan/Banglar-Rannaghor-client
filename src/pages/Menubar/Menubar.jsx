@@ -18,7 +18,7 @@ const Menubar = () => {
   };
   return (
     <div className="Menubar-container">
-      <div className="logo">logo</div>
+      <h2>BANGLAR RANNAGHAR</h2>
       <div className="menu-container">
          <Link to="/">
           <li>Home</li>
@@ -26,7 +26,9 @@ const Menubar = () => {
         <Link to="/services">
           <li>CHEFs</li>
         </Link>
-
+        <Link to="/blog">
+          <li>Blog</li>
+        </Link>
         {user?.email ? (
           <li>
             <button onClick={handleLogout}>Logout</button>
@@ -40,11 +42,7 @@ const Menubar = () => {
         <Link to="/register">
           <li>Registration</li>
         </Link>
-
-        {/* <li>home</li>
-        <li>sds</li>
-        <li>asdsa</li>
-        <li>asdas</li> */}
+       
       </div>
     </div>
   );
