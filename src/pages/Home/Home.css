@@ -34,7 +34,90 @@
  .service-card li {
    margin-bottom: 0.5rem;
  }
- 
+ .imge {
+  width: 100%;
+  height: 100%;
+}
  .service-card p:last-of-type {
    margin-bottom: 0;
  }
+ /* sect 1 design */
+ .food-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.food-card {
+  width: 300px;
+  height: 400px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.food-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.food-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.food-details {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+/* sec 2 design */
+.cooking-tips-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cooking-tips-heading {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.cooking-tips-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.cooking-tip {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cooking-tip-number {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 20px;
+  color: #FF6600;
+}
+
+.cooking-tip-text {
+  font-size: 18px;
+  line-height: 1.5;
+  flex-grow: 1;
+}

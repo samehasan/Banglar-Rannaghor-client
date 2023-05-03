@@ -16,7 +16,7 @@
   
   .ServiceDetails-image {
     width: 100%;
-    height: 400px;
+    height: 500px;
     object-fit: cover;
     border-radius: 10px;
   }
@@ -42,4 +42,4 @@
   
   .ServiceDetails-label {
     font-size: 1.2rem
-  
+  }

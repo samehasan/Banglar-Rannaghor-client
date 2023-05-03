@@ -27,7 +27,7 @@ const Services = () => {
                 </li>
               ))}
             </ul> */}
-            <p>Likes: ${service?.likes}</p>
+            <p>Likes: {service?.likes}</p>
             <p>Bio: {service?.bio}</p>
             <Link to={`/services/${service?.id}`}>
               <button>View Recipes</button>

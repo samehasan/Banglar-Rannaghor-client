@@ -8,6 +8,8 @@ const ServiceDetails = () => {
   const { id } = useParams();
   const [chef, setChef] = useState(null);
 
+  
+  
   useEffect(() => {
     fetch(`http://localhost:5000/allData`)
       .then((res) => res.json())
@@ -49,6 +51,9 @@ const ServiceDetails = () => {
             <p className="ServiceDetails-recipeIngredients">Ingredients: {recipe.ingredients.join(", ")}</p>
             <p className="ServiceDetails-recipeMethod">Cooking Method: {recipe.cooking_method}</p>
             <p className="ServiceDetails-recipeRating">Rating: {recipe.rating}</p>
+          
+        
+    
           </li>
         ))}
       </ul>

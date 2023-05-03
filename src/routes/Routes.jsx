@@ -10,8 +10,13 @@ import Register from "./../pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
 import Home from "../pages/Home/Home";
 import Blog from "../pages/Blog/Blog";
+import NotFound from "../pages/Notfound/NotFound";
+
 
 const router = createBrowserRouter([
+  {path:"*",
+    element:<NotFound></NotFound>
+  },
   {
     path: "/",
     element: <LoginLayout></LoginLayout>,
