@@ -14,23 +14,18 @@ const Home = () => {
   return (
 
      <div>
-     <img src="https://image.slidesharecdn.com/bengalicuisine-130522014817-phpapp02/85/bengali-cuisine-1-320.jpg?cb=1665716479" alt="" />
+     <img className='imge' src="https://uploads-ssl.webflow.com/62a2136eeda240340c0f48f1/62a361ce39e4c164baa677aa_duck-duck-goat-chicago-food-3.jpeg" alt="" />
 
- {/* <h1>Our Services</h1> */}
- <div className="services">
+ 
+ <h1 className='mdl'>Chef Overview</h1>
+      <div className="services">
         {servicesData?.services?.map((service) => (
           <div key={service?.id} className="service-card">
+            <img  src={service?.picture} alt={service?.name} />
             <h2>{service?.name}</h2>
-            <p>{service?.description}</p>
-            {/* <ul>
-              {service?.items?.map((item) => (
-                <li key={item?.id}>
-                  {item?.name} - ${item?.price}
-                </li>
-              ))}
-            </ul> */}
-            <p>Likes: ${service?.likes}</p>
-            <p>Bio: {service?.bio}</p>
+            <p>Years of Experience: {service?.years_of_experience}</p>
+            <p>Recipe: {service?.recipe}</p>
+            <p>Likes: {service?.likes}</p>
             <Link to={`/services/${service?.id}`}>
               <button>View Recipes</button>
             </Link>
