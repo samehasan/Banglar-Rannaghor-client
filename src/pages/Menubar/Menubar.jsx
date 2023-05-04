@@ -26,9 +26,11 @@ const Menubar = () => {
         {/* <NavLink className={({isActive})=>(isActive?'active':'link')} to="/services">
           <li>CHEFs</li>
         </NavLink> */}
-        <Link  to="/services">
-          <li>CHEFs</li>
-        </Link>
+       {
+        user &&  <Link  to="/services">
+        <li>CHEFs</li>
+      </Link>
+       }
         <Link to="/blog">
           <li>Blog</li>
         </Link>
