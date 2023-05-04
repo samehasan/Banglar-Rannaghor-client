@@ -57,7 +57,7 @@ const Login = () => {
                 </button>
                 <p className="p-2">
                   <small className="text-info">
-                    are you new? register here..
+                    are you new? go to register page..
                   </small>
                 </p>
               </form>

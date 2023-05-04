@@ -76,7 +76,7 @@ const Register = () => {
                 </button>
                 <p className="p-2">
                   <small className="text-info">
-                    already have account? login here..
+                    already have account? go to login page..
                   </small>
                 </p>
               </form>
