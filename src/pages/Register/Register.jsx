@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import SocialLoginBtn from "./../SocialLoginBtn/SocialLoginBtn";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
@@ -9,12 +8,13 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
+  const [photoUrl, setPhotoUrl] = useState("");
   const [error, setError] = useState("");
 
   const handleRegistration = (event) => {
     event.preventDefault();
-    if (!/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(password)) {
-      setError("password not valid need 8 char ");
+    if (!/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/.test(password)) {
+      setError("password not valid need 6 char for example:(Abc123) ");
       return;
     }
     if ((name, email, password)) {
@@ -52,7 +52,7 @@ const Register = () => {
                   <input
                     onChange={(e) => setPassword(e.target.value)}
                     className="password p-3 m-2"
-                    type="text"
+                    type="password"
                     placeholder="type your password"
                   />
                   {/* <input
@@ -62,6 +62,12 @@ const Register = () => {
                   /> */}
                   {/* <button>toggle</button> */}
                 </div>
+                <input
+                  onChange={(e) => setPhotoUrl(e.target.value)}
+                  className="email p-3 m-2"
+                  type="text"
+                  placeholder="enter photo URL"
+                />
                 <button
                   onClick={handleRegistration}
                   className="btn btn-info w-75 p-2 mt-3"
@@ -79,7 +85,7 @@ const Register = () => {
           <div className="col-md-6">
             <img
               className="w-100"
-              src="https://i.ibb.co/Vmyggr3/undraw-Login-re-4vu2.png"
+              src="https://i.ibb.co/hYJTmVX/undraw-Mobile-login-re-9ntv-1.png"
               alt=""
             />
           </div>
