@@ -12,7 +12,7 @@ const ServiceDetails = () => {
   const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/allData`)
+    fetch(`https://chef-seven.vercel.app/allData`)
       .then((res) => res.json())
       .then((data) => {
         const foundChef = data.services.find((chef) => chef.id === parseInt(id));
