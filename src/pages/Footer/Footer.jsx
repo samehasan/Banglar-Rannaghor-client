@@ -31,26 +31,12 @@ const Footer = () => {
             </div>
             <div className="col-md-4 item text">
               <h3>CONTACT US</h3>
-              <div className="row g-3">
-                <div className="col-md-12">
-                  <input
-                    type="email"
-                    className="form-control"
-                    placeholder="Email"
-                    aria-label="First name"
-                  />
-                </div>
-                <div className="col-md-12">
-                  {/* <input type="text" className="form-control" placeholder="Message" aria-label="Message"/> */}
-                  <textarea
-                    className="form-control"
-                    rows="5"
-                    id="comment"
-                    placeholder="Message"
-                  ></textarea>
-                </div>
-                <button className="btn btn-outline-light">SEND</button>
-              </div>
+              <p>
+              Mobile: 015438965453
+              </p>
+              <p>
+              Email: Food@gmail.com
+              </p>
             </div>
           </div>
           <p className="copyright">BANGLADESH FOOD © 2023</p>

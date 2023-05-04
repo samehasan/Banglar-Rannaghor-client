@@ -2,14 +2,15 @@
 
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./ServiceDetails.css";
 
 const ServiceDetails = () => {
   const { id } = useParams();
   const [chef, setChef] = useState(null);
+  const [favorites, setFavorites] = useState([]);
 
-  
-  
   useEffect(() => {
     fetch(`http://localhost:5000/allData`)
       .then((res) => res.json())
@@ -19,6 +20,12 @@ const ServiceDetails = () => {
       })
       .catch((error) => console.log(error));
   }, [id]);
+
+  const handleFavorite = (recipeId) => {
+    const newFavorites = [...favorites, recipeId];
+    setFavorites(newFavorites);
+    toast.success("Added to favorites!");
+  };
 
   if (!chef) {
     return <div>Loading...</div>;
@@ -48,12 +55,18 @@ const ServiceDetails = () => {
         {chef.recipes.map((recipe) => (
           <li key={recipe.recipe_id} className="ServiceDetails-recipeItem">
             <h4 className="ServiceDetails-recipeTitle">{recipe.recipe_name}</h4>
-            <p className="ServiceDetails-recipeIngredients">Ingredients: {recipe.ingredients.join(", ")}</p>
+            <p className="ServiceDetails-recipeIngredients">
+              Ingredients: {recipe.ingredients.slice(0, 5).join(", ")}
+            </p>
             <p className="ServiceDetails-recipeMethod">Cooking Method: {recipe.cooking_method}</p>
             <p className="ServiceDetails-recipeRating">Rating: {recipe.rating}</p>
-          
-        
-    
+            <button
+              className="ServiceDetails-favoriteButton"
+              disabled={favorites.includes(recipe.recipe_id)}
+              onClick={() => handleFavorite(recipe.recipe_id)}
+            >
+              {favorites.includes(recipe.recipe_id) ? "Added to favorites!" : "Favorite"}
+            </button>
           </li>
         ))}
       </ul>

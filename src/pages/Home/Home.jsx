@@ -15,9 +15,27 @@ const Home = () => {
 
      <div>
      
-     <div>
-      <img className='imge' src="https://uploads-ssl.webflow.com/62a2136eeda240340c0f48f1/62a361ce39e4c164baa677aa_duck-duck-goat-chicago-food-3.jpeg" alt="" />
-      </div>
+     <div style={{ position: "relative", display: "inline-block" }}>
+  <img
+    className="imge"
+    src="https://uploads-ssl.webflow.com/62a2136eeda240340c0f48f1/62a361ce39e4c164baa677aa_duck-duck-goat-chicago-food-3.jpeg"
+    alt=""
+  />
+  <div
+    style={{
+      position: "absolute",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)",
+      backgroundColor: "rgba(255, 255, 255, 0.8)",
+      padding: "1rem",
+      borderRadius: "10px",
+      zIndex: "1",
+    }}
+  >
+    <h2 style={{ margin: 0 }}>BANGLAR RANNAGHAR</h2>
+  </div>
+</div>
 
  
  <h1 className='mdl'>Chef Overview</h1>
